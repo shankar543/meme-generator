@@ -1,0 +1,33 @@
+.image-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .image-container img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    backface-visibility: hidden;
+    transition: transform 0.5s;
+  }
+  
+  .image-container .dummy-image {
+    z-index: 1;
+  }
+  
+  .image-container.flipped .dummy-image {
+    transform: rotateY(180deg);
+  }
+  
+  .image-container .main-image {
+    z-index: 0;
+    transform: rotateY(180deg);
+  }
+  
+  .image-container.flipped .main-image {
+    z-index: 1;
+    transform: rotateY(0);
+  }
+  

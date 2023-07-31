@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+.vertical{
+    width: 400px;
+    height: 550px;
+    margin: 50px auto;
+    background-color: #fff;
+    border: 1px solid orange;
+    text-align: center;
+    font-family: Poppins;
+    position: relative;
+}
+.vertical .container >h1{
+    font-family: Poppins;
+}
+.vertical .container{
+
+    display: flex;
+    flex-wrap: no-wrap;
+    flex-direction: column;
+    padding: 1em;
+    background-color: purple; 
+    color: #fff;
+    align-items: center;
+    height: 100%;
+
+}
+.vertical>.container>#canvas{
+    border: 1px solid white;
+    width: 100%;
+    max-width: 300px;
+    margin: 1.4em auto;
+}
+.vertical>.container>.tools{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: flex-start;
+}
+.vertical>.container>.tools>.row{
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
+ align-items: center;
+margin: .3em;   
+}
+.vertical>.container>.tools>.row>span{
+    font-size: 1em;
+    margin-right: .5em;
+    border-radius: 5px;
+    width: 3em;
+}
+.vertical>.container>.tools>.row.footerbtns>span:hover{
+    border: 2px solid orangered;
+}
+.vertical>.container>.tools>.row.footerbtns>span:active{
+    border: 3px solid greenyellow;
+}
+.vertical>.container>.tools>.row>input{
+    padding: .3em;
+    outline: none;
+    border: none;
+    caret-color: purple;
+    color: purple;
+    font-weight: 600;
+    font-size: 1em;
+   max-width: 100%;
+}
+.vertical>.container>.tools>.row>input:focus{
+    outline: none;
+    text-overflow: ellipsis;
+    box-shadow: 0 0 5px 3px rgba(255,255,255,0.5);
+    letter-spacing: 1px;
+    
+}
+.vertical>.container>.tools>.row.footerbtns>span{
+    border: 1px solid white;
+    box-shadow: 0 0 1px 2px rgba(0,0,0,0.7);
+    font-size: 1.1em;
+    color: white;
+    font-weight: 800;
+    padding: .5em;
+    margin: .2em 1em;
+    cursor:pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: auto;
+}
+.vertical>.container>.tools>.row.footerbtns{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 0 .5em;
+}
+.disabled{
+    pointer-events: none;
+    background-color: rgba(0,0,0,0.7);
+    opacity: 0.5;
+
+}
+.active{
+    pointer-events: auto;
+    background-color: transparent;
+    opacity: 1;
+}
+.edit-icon{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 1.5em;
+    margin: 0 0.2em;
+}
+.edit-icon:hover{
+    cursor: pointer;
+color: green;
+background-color: transparent;
+}
+.edit-icon:active{
+color: blue;
+}
+.tools>.fontstyles{
+max-height: 300px;
+width: 80%;
+height: auto;
+position: absolute;
+bottom: 0px;
+display: none;
+left: auto;
+}
+
+.tools>.fontstyles>ul{
+list-style-type: none;
+display: flex;
+flex-flow: column wrap;
+background-color: blueviolet;
+color: white;
+width: 100%;
+}
+.tools>.fontstyles>ul>li{
+    display: block;
+    width: 100%;
+    padding: 0 3em;
+    cursor: pointer;
+}
+
+.font-meme-1 {
+    font-family: Impact, sans-serif;
+  }
+  
+  .font-meme-2 {
+    font-family: Comic Sans MS, cursive;
+  }
+  
+  .font-meme-3 {
+    font-family: Arial Black, sans-serif;
+  }
+  
+  .font-meme-4 {
+    font-family: Lobster, cursive;
+  }
+  
+  .font-meme-5 {
+    font-family: Papyrus, fantasy;
+  }
+  
+  .font-meme-6 {
+    font-family: Brush Script MT, cursive;
+  }
+  
+  .font-meme-7 {
+    font-family: Chalkduster, fantasy;
+  }
+  
+  .font-meme-8 {
+    font-family: Pacifico, cursive;
+  }
+  
+  .font-meme-9 {
+    font-family: Anton, sans-serif;
+  }
+  
+  .font-meme-10 {
+    font-family: Monoton, cursive;
+  }
+  
+  .font-meme-11 {
+    font-family: Bangers, cursive;
+  }
+  
+  .font-meme-12 {
+    font-family: Press Start 2P, cursive;
+  }
+  
+  .font-meme-13 {
+    font-family: Courier New, monospace;
+  }
+  
+  .font-meme-14 {
+    font-family: Impact, sans-serif;
+    text-transform: uppercase;
+  }
+  
+  .font-meme-15 {
+    font-family: Comic Sans MS, cursive;
+    text-transform: uppercase;
+  }
+  
+  .font-meme-16 {
+    font-family: Lobster, cursive;
+    text-transform: uppercase;
+  }
+  
+  .font-meme-17 {
+    font-family: Pacifico, cursive;
+    text-transform: uppercase;
+  }
+  
+  .font-meme-18 {
+    font-family: Anton, sans-serif;
+    text-transform: uppercase;
+  }
+  
+  .font-meme-19 {
+    font-family: Bangers, cursive;
+    text-transform: uppercase;
+  }
+  
+  .font-meme-20 {
+    font-family: Monoton, cursive;
+    text-transform: uppercase;
+  }
+  
+  .font-meme-21 {
+    font-family: Impact, sans-serif;
+    letter-spacing: 2px;
+  }
+  
+  .font-meme-22 {
+    font-family: Comic Sans MS, cursive;
+    letter-spacing: 2px;
+  }
+  
+  .font-meme-23 {
+    font-family: Lobster, cursive;
+    letter-spacing: 2px;
+  }
+  
+  .font-meme-24 {
+    font-family: Pacifico, cursive;
+    letter-spacing: 2px;
+  }
+  
+  .font-meme-25 {
+    font-family: Anton, sans-serif;
+    letter-spacing: 2px;
+  }
+  
+  .font-meme-26 {
+    font-family: Bangers, cursive;
+    letter-spacing: 2px;
+  }
+  
+  .font-meme-27 {
+    font-family: Monoton, cursive;
+    letter-spacing: 2px;
+  }
+  
+  .font-meme-28 {
+    font-family: Impact, sans-serif;
+    text-decoration: underline;
+  }
+  
+  .font-meme-29 {
+    font-family: Comic Sans MS, cursive;
+    text-decoration: underline;
+  }
+  
+  .font-meme-30 {
+    font-family: Lobster, cursive;
+    text-decoration: underline;
+  }
+  .font-3d-1 {
+    text-shadow: 3px 3px 0px #000, 5px 5px 0px rgba(255, 255, 255, 0.3);
+  }
+  
+  .font-3d-2 {
+    text-shadow: 4px 4px 0px #000, 6px 6px 0px rgba(255, 255, 255, 0.4);
+  }
+  
+  .font-3d-3 {
+    text-shadow: 5px 5px 0px #000, 7px 7px 0px rgba(255, 255, 255, 0.5);
+  }
+  .font-animation-1 {
+    animation: bounce 1s infinite;
+  }
+  
+  .font-animation-2 {
+    animation: rotate 2s infinite;
+  }
+  
+  .font-animation-3 {
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes blink {
+    0%, 50%, 100% {
+      opacity: 1;
+    }
+    25%, 75% {
+      opacity: 0;
+    }
+  }
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .animate-text {
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+  

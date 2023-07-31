@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme genarator</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="vertical">
+            <div class="container">
+                <h1>meme generator</h1>
+                <canvas id="canvas" width="500" height="500"></canvas>
+                         <div class="tools">
+                                <div class="row"><span>image</span><input type="text" id="image" placeholder="place image url"></div>
+                                <div class="row"><span>quote</span><input type="text" id="quote" placeholder="addtext"></div>
+                                <div class="row footerbtns"><span id="create">create</span><span id="download">download</span></div>
+                                <div class="fontstyles"></div>    
+                         </div>
+                <span class="edit-icon"><i class="icon fas fa-arrow-circle-up"></i></span>
+            </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
